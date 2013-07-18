@@ -1,4 +1,41 @@
 <?php
+/*
+ *---------------------------------------------------------------
+ * FUEL INSTALL DIRECTORY
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+define('INSTALL_ROOT', str_replace('\\', '/', realpath(dirname(__FILE__))).'/fuel/');
+
+
+/*
+ *---------------------------------------------------------------
+ * FUEL CLI (Command Line Interface)
+ *---------------------------------------------------------------
+ *
+ * You may need to alter these if you are using the CLI.  These $_SERVER variables
+ * are used for calculating the $config['base_url'] which is used in the site_url() function.
+ * So if your output requires the correct site_url() path, you will need to change these.
+ */
+
+if (defined('STDIN'))
+{
+	$_SERVER['SERVER_NAME'] = 'localhost';
+	$_SERVER['SERVER_PORT'] = 80;
+}
+
 
 /*
  *---------------------------------------------------------------
@@ -28,11 +65,10 @@
  * By default development will show errors but testing and live will hide them.
  */
 
-if (defined('ENVIRONMENT'))
-{
 	switch (ENVIRONMENT)
 	{
 		case 'development':
+			ini_set('display_errors', 1);
 			error_reporting(E_ALL);
 		break;
 	
@@ -44,7 +80,6 @@ if (defined('ENVIRONMENT'))
 		default:
 			exit('The application environment is not set correctly.');
 	}
-}
 
 /*
  *---------------------------------------------------------------
@@ -56,7 +91,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = INSTALL_ROOT.'codeigniter';
 
 /*
  *---------------------------------------------------------------
@@ -72,7 +107,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
+	$application_folder = INSTALL_ROOT.'application';
 
 /*
  * --------------------------------------------------------------------
@@ -98,7 +133,7 @@ if (defined('ENVIRONMENT'))
 	// if your controller is not in a sub-folder within the "controllers" folder
 	// $routing['directory'] = '';
 
-	// The controller class file name.  Example:  Mycontroller
+	// The controller class file name.  Example:  Mycontroller.php
 	// $routing['controller'] = '';
 
 	// The controller function you wish to be called.
@@ -163,7 +198,6 @@ if (defined('ENVIRONMENT'))
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
 	// The PHP file extension
-	// this global constant is deprecated.
 	define('EXT', '.php');
 
 	// Path to the system folder
@@ -199,7 +233,7 @@ if (defined('ENVIRONMENT'))
  * And away we go...
  *
  */
-require_once BASEPATH.'core/CodeIgniter.php';
+require_once BASEPATH.'core/CodeIgniter'.EXT;
 
 /* End of file index.php */
 /* Location: ./index.php */
