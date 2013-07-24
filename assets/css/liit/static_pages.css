@@ -1,0 +1,193 @@
+
+/***************************************************************
+TAG STYLES
+***************************************************************/
+
+ol li  	{ color: #8d8f8e; line-height:15px; margin-left:15px; }
+span 	{ letter-spacing: 8px; }
+
+
+/***************************************************************
+GENERIC CLASSES
+***************************************************************/
+
+
+
+
+/***************************************************************
+SPECIFIC AREAS
+***************************************************************/
+
+div#about_main_container { width: 890px; height: 995px; font-family: Verdana, Arial, Helvetica, sans-serif; margin-bottom: 20px; background-color:transparent; }
+
+/*div.big_pill_container #left_col ul		{ margin-top:20px; padding-left: 30px; display: block;}
+div.big_pill_container #left_col ul li	{ font-size: 10px; line-height: 10px;}*/
+
+/*div#right_col ul		 { background-color:red; padding:0;}
+div#right_col ul li 	 { list-style-type: none; width:25%; position: relative; float:left; padding:2.5px 0;}
+div#right_col ul a 		 { display: block; text-decoration:none; }
+div#right_col ul a:hover { font-weight:bold; }*/
+
+div#about_page 								{ height: 995px; }
+div#about_page #left_col					{ height: 895px; background-color: #FF5A00;}
+div#about_page #right_col 					{ height: 995px; }
+div#about_page #left_col ul					{ margin-top:20px; padding-left: 30px; }
+div#about_page #left_col ul > li			{ float:none; padding:1.5px; }
+div#about_page #left_col ul > li > a 		{ font-weight:normal; color:#fff;}
+div#about_page #left_col ul li a:hover 		{ font-weight:bold; text-decoration: none; }
+div#about_page #left_col div:last-child		{ float: left;}
+
+div#hl_page							{ background-color:#8d8d8d;	}
+div#hl_page #left_col p 			{ color:#fff; text-decoration:none; font-weight:bold; }
+div#hl_page #left_col a 			{ color: #fff; font-size:10px; font-weight:normal; }
+div#hl_page #right_col h1 			{font-family: 'din', Verdana, Arial, Helvetica, sans-serif; font-size: 19px; color:#8d8f8e;  margin: 20px auto;}
+div#hl_page #right_col h2			{ font-size: 15px; color:#8d8f8e; font-family: Verdana, Helvetica, Arial, sans-serif; font-weight: bold; }
+div#hl_page #right_col p		    { font-size: 11px; font-family: Verdana, Helvetica, Arial, sans-serif; }
+div#hl_page #right_col >:last-child { margin-bottom: 10px;}
+div#hl_page #right_col ol			{ margin-left:10px; display:block; }
+div#hl_page #right_col ol li	    { list-style-type: decimal; }			
+
+
+/* Contact Us and Be Part styles*/
+
+div.small_container 				 				{ display: block; width: 582px; height:298px; margin: 45px auto 0; font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; position:relative; }
+div.small_container #logo 			 				{ margin-bottom: 30px; }
+div.small_container #close							{ position:absolute; top:0; right:0; cursor: pointer;}
+
+div.small_container > ul 	 						{ width:582px; background-color: #FF5A00; border-radius: 35px; color: #fff; margin:0; padding:0; overflow: hidden}
+div.small_container > ul >li:first-child			{ margin-left:16px; margin-top:20px; width:55%;}
+div.small_container > ul >li:last-child				{ float:right; margin:0; padding: 0; }
+div.small_container > ul >li:last-child img			{ border-top-right-radius: 35px; }
+div.small_container > ul >li >h5					{ font-size: 18px; margin:0; font-weight:normal; }
+div.small_container > ul >li >h6					{ font-size: 10px; margin:10px 0 0; }
+div.small_container > ul >li >p						{ margin:0;	 }
+div.small_container > ul >li >p > a					{ color: #fff; margin:0; display:inline; }
+div.small_container > ul >li >p > a:hover			{ text-decoration: underline;}
+div.small_container > ul >li #contact_footer		{ margin-top:20px;}
+
+div.small_container #pill_contactus 				{ height:219px; }
+div.small_container #pill_bepart 					{ height:170px; }
+div.small_container #pill_bepart >li:first-child    { margin-left:23px;}
+
+div.small_container div:nth-child(3)					{ width:492px; background-color: #FF5A00; border-radius: 35px; color: #fff; margin:0; padding:45px 45px 10px; overflow: hidden }
+div.small_container div:nth-child(3) > h1				{font-family: 'din',Verdana, Arial, Helvetica, sans-serif; margin:0 0 35px; font-size: 16px; font-weight: normal; }
+div.small_container div:nth-child(3) > p:first-of-type  { margin-bottom:22px; }
+div.small_container div:nth-child(3) > p > a			{ color:#fff; text-decoration:none;}
+div.small_container div:nth-child(3) > p > a:hover  	{ text-decoration: underline; }
+
+
+.globalSupport{
+    color:#fff;
+    overflow:hidden;
+    background-color:#F1592A;
+}
+.globalSupport p{
+    width:48%;
+    margin:1%;
+    float:left;
+    display:block;
+}
+.globalSupport p:nth-child(2){
+    width:98%;
+}
+
+
+/***************************************************************
+Pills here!!!
+***************************************************************/
+
+div.left_side {    
+    color: #FFFFFF;    
+    float: left;
+    border-top-left-radius: 30px 30px;
+    border-bottom-left-radius: 30px 30px; 
+    padding-left: 15px;
+}
+
+div.left_side a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+div.left_side a:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+div.left_side h5{
+    color: #FFFFFF;
+    margin-bottom: -20px;
+    
+
+}
+
+div.left_side h6{
+    color: #FFFFFF;
+    line-height: 5px;
+    margin-bottom: -5px;
+}
+
+#contact_footer {
+    padding-top: 20px;
+}
+
+div.orange {
+    background-color: #E64226;
+    /*height: 219px;
+    width: 50%;*/
+}
+
+#bepart {
+    height: 170px !important;
+    width: 350px !important;
+}
+
+div.light_orange {
+    background-color: #F1592A;
+    height: 1000px;
+    width: 30%;
+}
+
+div.right_side {
+
+}
+
+div.right_side_big {
+    width: 70%;
+}
+
+div.right_side_big img {
+    width: 340px;
+    text-align: center;
+}
+
+div.right_side_medium {
+    width: 50%;
+}
+
+div.right_side_small {
+    width: 25%;
+}
+
+
+.left-div {
+    float: left;
+    width: 100px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: linen;
+}
+.right-div {
+    margin-left: 108px;
+    background-color: lime;
+}
+.small_container a			{ color:#fff; text-decoration:none;}
+
+.small_container a:hover			{ color:#fff; text-decoration:underline;}
+
+#pill_bepart li{
+    margin-top: 0;
+}
+#pill_bepart li p { 
+  margin-top: 0;
+}

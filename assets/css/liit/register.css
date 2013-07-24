@@ -1,0 +1,286 @@
+.register_container{
+    background: #95c2cb !important;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+
+#register_left_col{
+    overflow: hidden;
+    width: 185px; 
+    float: left;
+
+}
+#register_right_col {
+    background: none repeat scroll 0 0 #F6F5F5;
+    float: left;
+    padding: 10px 30px;
+    width: 640px;
+}
+
+
+
+#reg-wrapper>div {border-bottom: 1px solid #949494; padding: 10px 90px 40px 00px; margin: 20px 0;}
+#reg-wrapper>div>h3 {}
+#reg-wrapper>div>h2, #reg-wrapper>div>div>h4 {font-size: 13px; color: #f15b2b;}
+#reg-wrapper>div p {font-size: 10px; color: #ada5a7; padding: 0px 0;}
+#reg-wrapper>div>div {padding: 10px 0 0 10px;}
+#reg-wrapper>div>div>h4 {font-size: 11px;}
+#reg-wrapper>div>div>p {padding: 0;}
+#reg-wrapper>div>div>a {color: #f15b2b;}
+#reg-wrapper>div>span>label {font-size: 13px; color: red; text-align: center; padding-bottom: 15px; background: none;}
+#register > div {
+    padding: 0 0 15px;
+}
+#register>div>h3, #register>div>div>label {font-size: 11px; color: #aea5a9; padding-bottom: 10px;}
+#register > div > h3 > span {
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+#register>div, #register>div>div {clear: both; overflow: hidden;}
+#register > div > div {
+    min-height: 25px;
+    padding: 5px 0;
+    line-height: 15px;
+}
+#register>div>div>label {display: block; float: left; width: 125px; line-height: 28px;}
+#register > div > div > label > span {
+    font-size: 9px;
+    letter-spacing: 0;
+    padding-left: 0px;
+}
+#register>div>div>input {float: left; border-radius: 10px; width: 360px; height: 28px; border: 1px solid #ccc; font: 11px; color: #ada5a7; padding: 2px 5px 4px;}
+#register>div>div>input.check {width: 20px;}
+#register>div>div>label.checktext {width: 525px; line-height: 15px;}
+#register > input[type="button"], #register>input[type="reset"], #register>input[type="submit"] {width: 115px; height: 27px; border-radius: 5px; border: none; color: #fff; background: #eb8c2c; margin-top: 15px; text-align: center; cursor: pointer; font-size: 11px;}
+#register>#update {width: 140px; margin-right: 165px;}
+#register>#reset {background: #77c4d2; margin-right: 20px;}
+
+#register > div > div > input.small {
+    height: 20px;
+    width: 220px;
+}
+.my_info_top_border {
+    border-top: 1px solid #949494;
+    height: 50px !important;
+    margin-top: 10px;
+    padding-top: 20px !important;
+}
+#register > div > div > select {
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    color: #ADA5A7;
+    height: 25px;
+    padding: 2px 5px 4px;
+    width: 232px;
+}
+#register > div > div > textarea{
+    resize: none;
+    vertical-align: baseline;
+    width: 400px;
+    height: 200px;
+    font-size: 10px;
+    font-family: Verdana;
+    color: #333;
+}
+#register .textarea_field{
+    height: 200px;
+    text-align: left;
+    padding-left: 125px ! important;
+}
+#register > div > div > input[type='checkbox']{
+    width: 13px;
+}
+#register > div > div > span input[type='checkbox']{
+    width: 13px;
+}
+#register span {
+    letter-spacing: 0;
+    line-height:15px;
+    margin-left: 5px;
+    font-size: 10px;
+    color: #ada5a7;
+    padding: 0px 0;
+}
+#register  input[type="button"], #register input[type="reset"], #register input[type="submit"] {
+    width: 115px;
+    height: 27px; 
+    border-radius: 5px;
+    border: none; 
+    color: #fff; 
+    background: #eb8c2c;
+    margin-top: 15px; 
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    float: none;
+    margin-right: 30px;
+}
+#register #update {width: 140px; margin-right: 165px;}
+#register  #reset {background: #77c4d2; margin-right: 20px; width: 115px !important}
+
+#register > div > div.actions {
+    border-top: 1px solid #949494;
+    height: auto;
+    padding: 5px 0;
+    text-align: left;
+}
+#register span.error_highlight {
+    border: 2px solid #CC3300;
+    border-radius: 10px 10px 10px 10px;
+    letter-spacing: 0 !important;
+}
+span.error_highlight input, span.error_highlight textarea, span.error_highlight select {
+    border: 2px solid #CC3300;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2px 5px 4px;
+    width: 220px;
+}
+#mptvpro {
+    padding: 0 20px;
+    width: 550px;
+    margin: auto;
+}
+#mptvpro, #mptvpro a, #mptvpro p,  #mptvpro strong{
+    color: #999999;
+}
+#mptvpro ul {
+    margin-top: 2px;
+    padding-left: 8px;
+}
+#mptvpro a:link{
+    color: #EE5A2C;
+    text-decoration: none;
+}
+#mptvpro #reset {
+    background: none repeat scroll 0 0 #77C4D2;
+    border: 0 none;
+    border-radius: 5px 5px 5px 5px;
+    color: #FFFFFF;
+    height: 27px;
+    margin-right: 20px;
+    width: 115px !important;
+}
+#mptvpro  input[type="button"], #mptvpro input[type="submit"] {
+    width: 115px;
+    height: 27px; 
+    border-radius: 5px;
+    border: none; 
+    color: #fff; 
+    background: #eb8c2c;
+    margin-top: 15px; 
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    float: none;
+}
+
+#mptvpro  select {
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    color: #ADA5A7;
+    height: 25px;
+    padding: 2px 5px 4px;
+    width: 232px;
+}
+#mptvpro input {
+    border-radius: 10px;
+    height: 25px;
+    border: 1px solid #ccc; 
+    font: 11px; 
+    color: #ada5a7;
+    padding: 2px 5px 4px;
+}
+table{ 
+    color: #999999;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+
+}
+table h2{
+    color: #EE5A2C;
+    font-size: 18px;
+}
+table.mptvpro {
+    color: #999999;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+}
+table div ul li {
+    background: url("/assets/images/li_plus.gif") no-repeat scroll left 5px transparent;
+    float: none;
+    list-style-position: inside;
+    margin-left: 0;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-top: 0;
+    color: #999999;
+}
+table.mptvpro a {
+    color: #FF5A00 !important;
+}
+#register #user_name_check ,#register #email_check,#register #password_matched{
+    color: #FF5A00;
+    font-weight: bold;
+    letter-spacing: 0;
+    padding-left: 15px;
+    visibility: hidden;
+    font-size: 11px;
+}
+#password_matched{
+    color: green !important;
+}
+#pass_check { 
+    padding-left: 15px;
+}
+#terms_check{
+    margin-top: 5px;
+    float: left;
+}
+label.register-error {
+    color: #FF5A00 !important;
+    font-weight: bold;
+    letter-spacing: 0;
+    padding-left: 15px;
+    width: auto !important;
+}
+#register > div > div.terms_field{
+    height: auto !important;
+}
+#register > div > div.terms_field > label.register-error {
+    color: #FF5A00 !important;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 20px;
+    overflow: hidden;
+    padding:0 0 0 5px;
+    width: auto !important;
+}
+#reg-wrapper>div>h2 {font-size: 15px; font-family: 'din', Verdana,​Arial,​Helvetica,​sans-serif;  color: #f1592a; margin-top: 9px;}
+
+#reg-wrapper>div>a {color: #f1592a;}
+
+#register .required_msg{
+    line-height: 10px;
+    color: #AEA5A9;
+    height: 15px;
+}
+
+#mptvpro_form input.mptvpro_form_error{
+
+    border: 3px solid #EE5A2C;
+    border-radius: 10px 10px 10px 10px; 
+}
+#mptvpro_form label.mptvpro_form_error{
+    display: none !important;
+}
+#mailing_list{
+    margin-right: 5px; 
+}
+#span_mailing_list{
+    margin-left: 0px !important;
+}
