@@ -30,7 +30,19 @@ class Register extends CI_Controller {
 
         $vars['status'] = '';
         $this->load->model('countries_model');
+        $this->load->model('users_model');
+
         $this->session->set_flashdata('success', false);
+
+        if (!empty($_POST)) {
+            // put your processing code here... we show what we do for emailing. You will need to add a correct email address
+            if ($this->_process($_POST)) {
+                $this->session->set_flashdata('success', TRUE);
+            } else {
+                $this->session->set_flashdata('error', true);
+            }
+            redirect(current_url());
+        }
 
 
 
@@ -77,6 +89,54 @@ class Register extends CI_Controller {
 
     function _process($data) {
         $this->load->library('validator');
+
+
+        /*
+          Set rules up here so we can pass them to the form_builder to display errors.
+          validator_helper contains the valid_email function... validator helper automatically gets' looded with Validation Class'
+         */
+
+        $this->validator->add_rule('user_name', 'required', '', $this->input->post('user_name'));
+        $this->validator->add_rule('password', 'required', '', $this->input->post('user_name'));
+        $this->validator->add_rule('first_name', 'required', '', $this->input->post('first_name'));
+        $this->validator->add_rule('last_name', 'required', '', $this->input->post('last_name'));
+        $this->validator->add_rule('email', 'valid_email', '', $this->input->post('email'));
+        $this->validator->add_rule('email', 'valid_email', 'Please enter in a valid email', $this->input->post('email'));
+
+//        $this->validator->add_rule('terms', 'required', '', $this->input->post('terms'));
+        if ($this->validator->validate()) {
+
+            //    $this->load->module_model(FUEL_FOLDER, 'roles_model');
+            $this->load->model('users_model');
+            if ($this->users_model->user_allready_exists($data['user_name']) < 1) {
+
+                //  $data['user_name'] = $data['email'];
+                unset($data['confirm_password'], $data['Register']);
+
+                $data['is_admin'] = 0;
+                $data['created_by'] = $data['user_name'];
+                $data['updated_by'] = $data['user_name'];
+                $data['created_at'] = date('Y-m-d H:i:s');
+                $data['updated_at'] = date('Y-m-d H:i:s');
+                $data['is_active'] = 1;
+                foreach ($data as $key => $value) {
+                    if ($key == 'password') {
+                        $insert[$key] = sha1($value);
+                    }
+                    else
+                        $insert[$key] = $value;
+                    //   var_dump($insert);
+                }
+
+
+                $this->db->insert('liit_users', $insert);
+                //$id_user = $this->db->insert_id();
+
+                return TRUE;
+            }else {
+                $this->session->set_flashdata('msg', "User name already used");
+            }
+        }
     }
 
 }

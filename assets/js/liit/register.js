@@ -26,11 +26,12 @@ $(function() {
                 required: true,
                 alpha: true
             },
+            email: {
+                required: true,
+                email: true
+            },
             country: {
                 required: true
-            },
-            phone: {
-                required: true,
             }
         },
         messages: {
@@ -57,15 +58,7 @@ $(function() {
         return this.optional(element) || /^[A-Za-z\s]*$/.test(value);
     }, "Username must contain only letters.");
 
-    $.validator.addMethod("terms_conditions", function(value, element) {
-        if ($('#terms').is(':checked')) {
-            return true;
-        } else {
-            return false;
-        }
-    }, "The terms must be accepted before you can register.");
-
-
+  
     $('#reset').click(function() {
         location.href = '/';
     });

@@ -70,6 +70,6 @@ class Countries_model extends Base_module_model {
 
 }
 
-class Country_model extends Data_record {
+class Country_model extends Base_module_record {
     
 }

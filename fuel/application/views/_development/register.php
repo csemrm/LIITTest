@@ -11,11 +11,16 @@
             <?php
             $success = $this->session->flashdata('success');
             $error = $this->session->flashdata('error');
+            $msg = $this->session->flashdata('msg');
+            
             if (isset($action) && $action == 'Update' && (isset($success) && $success == true)) {
                 ?><div style="text-align: center" class="">Your account successfully completed.</div>
                 <?php
             } elseif (isset($action) && $action == 'Update' && (isset($success) && $error == true)) {
                 ?><div style="text-align: center" class="">Please check your data.</div>
+                <?php
+            }elseif (isset($action) && $action == 'Register' && ($error == true)) {
+                ?><div style="text-align: center;color: red;font-size: 11px" class=""><?=$msg?></div>
                 <?php
             } else if (isset($success) && $success == true) {
                 ?><div style="text-align: center" class="">Your account has been created. please click <a href="fuel/login">here </a> to login.</div>
